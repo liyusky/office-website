@@ -24,20 +24,57 @@
         $param: (flex flex) (alignItems center) (justifyContent space-between);
         @include flexSet($param);
         .item-sign {
-          font-size: 57px;
-          line-height: 57px;
-          color: #c19d6d;
+          width: 57px;
+          height: 57px;
           margin-right: 18px;
         }
         .item-message-group {
           $param: (flex flex) (direction column) (justifyContent space-between);
           @include flexSet($param);
           color: #7d8086;
+          position: relative;
           .message-title {
             font-size: 30px;
           }
           .message-content {
             font-size: 16px;
+          }
+          .message-content:hover~.QR-wrap{
+            display: block;
+          }
+          .QR-wrap {
+            display: none;
+            width: 88px;
+            height: 88px;
+            position: absolute;
+            z-index: 99;
+            left: 50%;
+            top: -52px;
+            margin: {
+              left: -44px;
+            } 
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .QR-wrap::after {
+            content: "";
+            display: block;
+            position: absolute;
+            border: {
+              left: 8px solid transparent;
+              right: 8px solid transparent;
+              top: 8px solid #fff;
+            }
+            bottom: -8px;
+
+            left: 50%;
+            margin: {
+              left: -8px;
+            }  
           }
         }
         .item-message {
