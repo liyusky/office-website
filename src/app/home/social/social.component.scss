@@ -1,0 +1,39 @@
+@import "../../../../sass/_flex.scss";
+.social {
+  width: 100%;
+  height: 420px;
+  $param: (flex flex) (justifyContent center);
+  @include flexSet($param);
+  &-content {
+    width: 1100px;
+    height: 100%;
+    $param: (flex flex) (alignItems center) (justifyContent space-between);
+    @include flexSet($param);
+    .content-banner {
+      width: 440px;
+      height: 400px;
+    }
+    .content-detail {
+      width: 554px;
+      height: 200px;
+      $param: (flex flex) (direction column) (justifyContent space-around);
+      @include flexSet($param);
+      .detail-title {
+        color: #333333;
+        font-size: 32px;
+      }
+      .detail-message {
+        width: 100%;
+        height: 87px;
+        $param: (flex flex) (direction column) (justifyContent space-around);
+        @include flexSet($param);
+        font-size: 14px;
+        color: #656565;
+        p {
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+

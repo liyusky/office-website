@@ -1,0 +1,50 @@
+@import "../../../../sass/_flex.scss";
+.characteristic {
+  width: 100%;
+  height: 200px;
+  $param: (flex flex) (justifyContent center);
+  @include flexSet($param);
+  &-content {
+    width: 1100px;
+    height: 100%;
+    background-color: #fff;
+    $param: (flex flex) (direction column) (justifyContent space-between);
+    @include flexSet($param);
+    .content-list {
+      width: 100%;
+      height: 100%;
+      $param: (flex flex) (justifyContent space-between) (alignItems center);
+      @include flexSet($param);
+      .list-item {
+        width: 25%;
+        height: 73px;
+
+        $param: (flex flex) (justifyContent space-between) (alignItems center);
+        @include flexSet($param);
+        .item-sign {
+          width: 68px;
+          height: 73px;
+        }
+        .item-content {
+          width: 100%;
+          height: 100%;
+          $param: (flex flex) (direction column) (justifyContent space-around);
+          @include flexSet($param);
+          margin: {
+            left: 20px;
+          }
+          .item-features {
+            font-size: 16px;
+            color: #2577e4;
+
+          }
+          .item-message {
+            font-size: 14px;
+            color: #666666;
+
+          }
+        }
+      }
+    }
+  }
+}

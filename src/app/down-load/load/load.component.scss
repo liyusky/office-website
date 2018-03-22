@@ -1,0 +1,59 @@
+@import "../../../../sass/_flex.scss";
+.load {
+  width: 100%;
+  height: 600px;
+  $param: (flex flex) (justifyContent center);
+  @include flexSet($param);
+  background-color: #000;
+
+  &-content {
+    width: 1100px;
+    height: 100%;
+    position: relative;
+    $param: (flex flex) (justifyContent space-between);
+    @include flexSet($param);
+
+    .content-select-app {
+      $param: (flex flex) (alignItems center) (justifyContent space-between);
+      @include flexSet($param);
+      width: 450px;
+      height: 170px;
+      position: absolute;
+      bottom: 90px;
+
+      .content-btn-group {
+        width: 235px;
+        height: 100%;
+        $param: (flex flex) (direction column) (justifyContent space-between);
+        @include flexSet($param);
+        padding: {
+          top: 15px;
+          bottom: 15px;
+        }
+        .btn-item {
+          width: 100%;
+          height: 55px;
+          $param: (flex flex) (alignItems center) (justifyContent center);
+          @include flexSet($param);
+          background-color: transparent;
+          font-size: 21px;
+          color: #ffffff;
+          border: 1px solid #ffffff;
+          border-radius: 3px;
+        }
+      }
+      .QR-code {
+        width: 150px;
+        height: 150px;
+      }
+    }
+    .content-banner {
+      position: absolute;
+      z-index: 99;
+      width: 583px;
+      height: 648px;
+      bottom: -100px;
+      right: 20px;
+    }
+  }
+}

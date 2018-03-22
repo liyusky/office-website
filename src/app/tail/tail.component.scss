@@ -1,0 +1,96 @@
+@import "../../../sass/_flex.scss";
+.tail {
+  width: 100%;
+  height: 270px;
+  background-color: #131518;
+  $param: (flex flex) (direction column) (justifyContent space-around) (alignItems center);
+  @include flexSet($param);
+  &-contact {
+    width: 1100px;
+    height: 186px;
+    padding: {
+      right: 50px;
+    }
+    $param: (flex flex) (alignItems center) (justifyContent space-between);
+    @include flexSet($param);
+    .contact-list {
+      width: 850px;
+      height: 100%;
+      $param: (flex flex) (alignItems center) (justifyContent space-between);
+      @include flexSet($param);
+      .contact-item {
+        width: auto;
+        height: 57px;
+        $param: (flex flex) (alignItems center) (justifyContent space-between);
+        @include flexSet($param);
+        .item-sign {
+          font-size: 57px;
+          line-height: 57px;
+          color: #c19d6d;
+          margin-right: 18px;
+        }
+        .item-message-group {
+          $param: (flex flex) (direction column) (justifyContent space-between);
+          @include flexSet($param);
+          color: #7d8086;
+          .message-title {
+            font-size: 30px;
+          }
+          .message-content {
+            font-size: 16px;
+          }
+        }
+        .item-message {
+          font-size: 30px;
+          color: #7d8086;
+        }
+      }
+    }
+    .contact-follow {
+      width: 70px;
+      height: 100%;
+      padding: {
+        top: 25px;
+        bottom: 15px;
+      }
+      $param: (flex flex) (direction column) (alignItems center) (justifyContent space-around);
+      @include flexSet($param);
+      p:first-of-type {
+        font-size: 16px;
+        color: #ffffff;
+      }
+      p:nth-of-type(2) {
+        font-size: 14px;
+        color: #7d8086;
+      }
+      p:last-of-type {
+        font-size: 12px;
+        color: #7d8086;
+      }
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+  &-record {
+    width: 1100px;
+    height: 270px - 186px;
+    $param: (flex flex) (direction column) (justifyContent space-around) (alignItems center);
+    @include flexSet($param);
+    border: {
+      top: 1px solid #2a3244;
+    }
+    padding: {
+      top: 15px;
+      bottom: 15px;
+    }
+    p {
+      font-size: 13px;
+      color: #7d8086;
+      span:first-of-type {
+        margin-right: 15px;
+      }
+    }
+  }
+}

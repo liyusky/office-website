@@ -1,0 +1,35 @@
+@import "../../../../sass/_flex.scss";
+.banner {
+  width: 100%;
+  height: 500px;
+  background: #000000;
+  position: relative;
+  padding: {
+    top: 227px;
+    left: (891 / 1920) * 100%;
+  }
+  .banner-content {
+    width: (182 * 2 + 33) * 1px;
+    height: (42 + 150 + 41) * 1px;
+    $param: (flex flex) (direction column) (justifyContent space-between) (alignItems center);
+    @include flexSet($param);
+    .btn-group {
+      width: 100%;
+      height: 42px;
+      $param: (flex flex) (justifyContent space-between);
+      @include flexSet($param);
+      .btn-item {
+        width: 182px;
+        height: 100%;
+        $param: (flex flex) (alignItems center) (justifyContent center);
+        @include flexSet($param);
+        border: 1px solid #ffffff;
+        color: #ffffff;
+      }
+    }
+    .QR-code {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}

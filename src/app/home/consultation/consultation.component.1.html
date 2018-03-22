@@ -1,0 +1,43 @@
+<section class="consultation">
+  <div class="consultation-content">
+    <h3 class="topic-title">
+      <span class="title-symbol">{{ '{' }}</span>
+      <span class="title-message">疑问解答</span>
+      <span class="title-symbol">{{ '}' }}</span>
+    </h3>
+    <!-- <ul class="content-detail" *ngFor="let content of consultationContent">
+      <li class="detail-item">
+        <div class="item-question">
+          <i class="question-sign"></i>
+          <p>{{content.question}}</p>
+        </div>
+        <div class="item-answer">
+          <i class="answer-sign"></i>
+          <div class="answer-content" *ngFor="let answer of item.answer">
+            <p>{{ answer }}</p>
+            <p>1、下载、注册、添加好友</p>
+            <p>下载借条大师 App ，注册激活。进入App发现页面，查看商户，添加好友。</p>
+            <p>2、填写借款信息</p>
+            <p>打开商户聊天界面，点击“打借条”、“借钱”。在借钱页面分别填写：借款金额、还款日期、年利率、借款用途、借款发布期。</p>
+            <p>3、借款标的发布</p>
+            <p>阅读并勾选“相关协议”，确认无误后点击“发布”；输入交易密码后发布成功。这样好友就能看到您的借款需求了，坐等资金到账吧。</p>
+          </div>
+        </div>
+      </li>
+      <li class="detail-item">
+        <div class="item-question">
+          <i class="question-sign"></i>
+          <p>如何失信查询？</p>
+        </div>
+        <div class="item-answer">
+          <i class="answer-sign"></i>
+          <div class="answer-content">
+            <p>1.该功能可查询在借贷宝平台有逾期行为的用户。</p>
+            <p>2.查询结果为有超过45天逾期行为的用户。</p>
+          </div>
+        </div>
+      </li>
+    </ul> -->
+    <div class="content-load" *ngIf="hasMore" (click)="javascript: readMore();">查看更多</div>
+  </div>
+</section>

@@ -1,0 +1,79 @@
+@import "../../../../sass/_flex.scss";
+.consultation {
+  width: 100%;
+  min-height: 620px;
+  $param: (flex flex) (justifyContent center);
+  @include flexSet($param);
+  padding: {
+    top: 60px;
+    bottom: 10px;
+  }
+  .consultation-content {
+    width: 1100px;
+    height: 100%;
+    min-height: 620px;
+    $param: (flex flex) (direction column) (justifyContent space-between);
+    @include flexSet($param);
+    .content-detail {
+      width: 100%;
+      height: 420px;
+      $param: (flex flex) (direction column) (justifyContent space-around);
+      @include flexSet($param);
+      .detail-item {
+        width: 100%;
+        padding: {
+          top: 15px;
+          bottom: 15px;
+        }
+        $param: (flex flex) (direction column) (justifyContent space-between);
+        @include flexSet($param);
+        .item-question {
+          width: 100%;
+          height: 45px;
+          font-size: 16px;
+          $param: (flex flex) (alignItem center);
+          @include flexSet($param);
+          .question-sign {
+            color: #2f9bf1;
+            margin: {
+              right: 10px;
+            }
+          }
+          p {
+            color: #333333;
+            font-weight: 600;
+          }
+        }
+        .item-answer {
+          width: 100%;
+          $param: (flex flex) (justifyContent flex-start);
+          @include flexSet($param);
+          .answer-sign {
+            color: #2f9bf1;
+            margin: {
+              right: 10px;
+            }
+          }
+          .answer-content {
+            width: 100%;
+            font-size: 13px;
+            color: #656565;
+            line-height: 30px;
+            $param: (flex flex) (direction column) (justifyContent space-between);
+            @include flexSet($param);
+          }
+        }
+      }
+    }
+    .content-load {
+      width: 1100px;
+      height: 80px;
+      $param: (flex flex) (alignItems center) (justifyContent center);
+      @include flexSet($param);
+      color: #2577e4;
+      font-size: 15px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+  }
+}

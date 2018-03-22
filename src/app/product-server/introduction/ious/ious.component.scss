@@ -1,0 +1,28 @@
+@import "../../../../../sass/_flex.scss";
+.detail-item {
+  width: 100%;
+  height: auto;
+  padding: {
+    bottom: 20px;
+  }
+  $param: (flex flex) (direction column) (justifyContent space-between);
+  @include flexSet($param);
+  .detail-title {
+    font-size: 16px;
+    color: #333333;
+    line-height: 30px;
+    padding: {
+      bottom: 10px;
+    }
+  }
+  .detail-content {
+    font-size: 14px;
+    color: #65656a;
+    line-height: 30px;
+  }
+}
+
+.detail-banner {
+  width: 410px;
+  height: 542px;
+}
