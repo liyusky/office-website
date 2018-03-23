@@ -16,10 +16,10 @@ export const appRoutes = [
     path: 'product-server',
     loadChildren: './product-server/product-server.module#ProductServerModule'
   },
-  // {
-  //   path: 'about-us',
-  //   loadChildren: './about-us/about-us.module#AboutUsModule'
-  // },
+  {
+    path: 'about-us',
+    loadChildren: './about-us/about-us.module#AboutUsModule'
+  },
   {
     path: '**',
     loadChildren: './home/home.module#HomeModule'

@@ -4,5 +4,9 @@ export const homeRoutes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: '**',
+    component: HomeComponent
   }
 ];
