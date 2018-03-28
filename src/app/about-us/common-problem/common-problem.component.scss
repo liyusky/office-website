@@ -1,0 +1,83 @@
+@import "../../../../sass/_flex.scss";
+.article {
+  width: 100%;
+  height: auto;
+  padding: {
+    left: 50px;
+    right: 50px;
+    top: 45px;
+    bottom: 45px;
+  }
+  background-color: #fff;
+
+  .article-list {
+    width: 100%;
+    height: auto;
+
+    .list-item {
+      width: 100%;
+      height: auto;
+      min-height: 45px;
+
+      .item-question {
+        $param: (flex flex) (alignItems center);
+        @include flexSet($param);
+        width: 100%;
+        height: 45px;
+        color: #333333;
+        font-size: 14px;
+        text-indent: 3px;
+        font-weight: 600;
+
+        .question-sign {
+          margin: {
+            right: 0.5em;
+          }
+        }
+      }
+
+      .item-answer {
+        $param: (flex flex) (direction column) (justifyContent space-around);
+        @include flexSet($param);
+        width: 100%;
+        height: auto;
+        padding: {
+          left: 21px;
+          right: 21px;
+          top: 24px;
+          bottom: 29px;
+        }
+        background-color: #e8f2ff;
+
+
+        .answer-group {
+          width: 100%;
+          height: auto;
+          font-size: 14px;
+          
+          .group-title {
+            width: 100%;
+            height: auto;
+            line-height: 45px;
+            color: #333333;
+            .title-sign {
+              margin: {
+                right: 0.5em;
+
+              }
+            }
+          }
+
+          .group-content {
+            width: 100%;
+            color: #656565;
+            line-height: 28px;
+
+            
+          }
+        }
+      }
+
+    }
+  }
+}

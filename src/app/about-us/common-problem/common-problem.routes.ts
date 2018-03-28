@@ -1,6 +1,6 @@
 import { CommonProblemComponent } from './common-problem.component';
 
-export const commonProblemRoutes = [
+export const CommonProblemRoutes = [
   {
     path: '',
     component: CommonProblemComponent

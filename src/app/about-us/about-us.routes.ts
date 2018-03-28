@@ -4,19 +4,36 @@ export const aboutUsRoutes = [
   {
     path: '',
     component: AboutUsComponent,
-    // children: [
-    //   {
-    //     path: 'company-profile',
-    //     loadChildren: './company-profile/company-profile#CompanyProfileModule'
-    //   },
-    //   {
-    //     path: 'common-problem',
-    //     loadChildren: './common-problem/common-problem#CommonProblemModule'
-    //   },
-    //   {
-    //     path: 'site-notice',
-    //     loadChildren: './site-notice/site-notice#SiteNoticeModule'
-    //   },
-    // ]
+    children: [
+      {
+        path: '',
+        redirectTo: 'company-profile',
+        pathMatch: 'full'
+      },
+      {
+        path: 'company-profile',
+        loadChildren: './company-profile/company-profile.module#CompanyProfileModule'
+      },
+      {
+        path: 'common-problem',
+        loadChildren: './common-problem/common-problem.module#CommonProblemModule'
+      },
+      {
+        path: 'site-notice',
+        loadChildren: './site-notice/site-notice.module#SiteNoticeModule'
+      },
+      {
+        path: 'contact-us',
+        loadChildren: './contact-us/contact-us.module#ContactUsModule'
+      },
+      {
+        path: 'career',
+        loadChildren: './career/career.module#CareerModule'
+      },
+      {
+        path: '**',
+        loadChildren: './company-profile/company-profile.module#CompanyProfileModule'
+      }
+    ]
   }
 ];

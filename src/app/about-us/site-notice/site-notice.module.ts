@@ -3,12 +3,11 @@ import { RouterModule } from '@angular/router';
 
 import { SiteNoticeComponent } from './site-notice.component';
 
-import { siteNoticeRoutes } from './site-notice.routes';
-
+import { SiteNoticeRoutes } from './site-notice.routes';
 
 @NgModule({
   imports: [
-    RouterModule.forChild(siteNoticeRoutes)
+    RouterModule.forChild(SiteNoticeRoutes)
   ],
   declarations: [
     SiteNoticeComponent

@@ -3,14 +3,14 @@ import { RouterModule } from '@angular/router';
 
 import { CompanyProfileComponent } from './company-profile.component';
 
-import { companyProfileRoutes } from './company-profile.routes';
+import { CompanyProfileRoutes } from './company-profile.routes';
 
 @NgModule({
   declarations: [
     CompanyProfileComponent
   ],
   imports: [
-    RouterModule.forChild(companyProfileRoutes)
+    RouterModule.forChild(CompanyProfileRoutes)
   ]
 })
 export class CompanyProfileModule { }
