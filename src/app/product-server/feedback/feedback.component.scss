@@ -1,0 +1,94 @@
+@import "../../../../sass/_flex.scss";
+.feedback {
+  $param: (flex flex) (alignItems center) (justifyContent center);
+  @include flexSet($param);
+  width: 100%;
+  height: 550px;
+  position: relative;
+  user-select: none;
+  .feedback-content {
+    $param: (flex flex) (direction column) (alignItems center) (justifyContent space-between);
+    @include flexSet($param);
+    background-color: rgba($color: #ffffff, $alpha: 0.7);
+    width: 1100px;
+    height: 445px;
+    padding: {
+      top: 30px;
+      bottom: 20px;
+    }
+    .content-header {
+      $param: (flex flex) (direction column) (alignItems center) (justifyContent space-between);
+      @include flexSet($param);
+      width: 100%;
+      height: 75px;
+      .header-title {
+        font-size: 30px;
+        color: #333333;
+        font-weight: 400;
+      }
+      .header-content {
+        font-size: 18px;
+        color: #666666;
+      }
+    }
+    .content-form {
+      $param: (flex flex) (justifyContent space-between);
+      @include flexSet($param);
+      width: 100%;
+      height: 215px;
+      padding: {
+        left: 57px;
+        right: 103px;
+      }
+      .input-group {
+        $param: (flex flex) (direction column) (justifyContent space-between);
+        @include flexSet($param);
+        width: 385px;
+        height: 100%;
+        font-size: 14px;
+        color: #666666;
+        .input-control {
+          $param: (flex flex) (alignItems center);
+          @include flexSet($param);
+          text-indent: 16px;
+          width: 100%;
+          height: 37px;
+          border: 1px solid #bfbfbf;
+        }
+      }
+      .textarea-control {
+        width: 525px;
+        height: 100%;
+        resize: none;
+        padding: {
+          left: 15px;
+          right: 15px;
+          top: 5px;
+          bottom: 5px;
+        }
+        line-height: 20px;
+        border: 1px solid #bfbfbf;
+      }
+    }
+    .content-tail {
+      $param: (flex flex) (justifyContent flex-end);
+      @include flexSet($param);
+      width: 100%;
+      height: 42px;
+      padding: {
+        right: 103px;
+      }
+      .tail-btn {
+        $param: (flex flex) (alignItems center) (justifyContent center);
+        @include flexSet($param);
+        width: 160px;
+        height: 42px;
+        background-color: #2577e4;
+        font-size: 20px;
+        letter-spacing: 5px;
+        color: #ffffff;
+        border-radius: 3px;
+      }
+    }
+  }
+}

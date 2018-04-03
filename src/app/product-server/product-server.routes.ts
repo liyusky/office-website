@@ -2,12 +2,11 @@ import { ProductServerComponent } from './product-server.component';
 
 export const productServerRoutes = [
   {
-    path: '',
-    redirectTo: 'ious',
-    pathMatch: 'full'
+    path: '**',
+    component: ProductServerComponent
   },
   {
-    path: 'ious',
+    path: '',
     component: ProductServerComponent
   },
 ]

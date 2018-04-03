@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ServerNavComponent } from './server-nav.component';
+import { FeedbackComponent } from './feedback.component';
 
-describe('ServerNavComponent', () => {
-  let component: ServerNavComponent;
-  let fixture: ComponentFixture<ServerNavComponent>;
+describe('FeedbackComponent', () => {
+  let component: FeedbackComponent;
+  let fixture: ComponentFixture<FeedbackComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ServerNavComponent ]
+      declarations: [ FeedbackComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ServerNavComponent);
+    fixture = TestBed.createComponent(FeedbackComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

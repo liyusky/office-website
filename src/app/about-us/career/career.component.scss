@@ -1,0 +1,117 @@
+@import "../../../../sass/_flex.scss";
+.article {
+  width: 100%;
+  height: auto;
+  padding: {
+    left: 30px;
+    right: 30px;
+    bottom: 45px;
+  }
+  background-color: #fff;
+
+  .article-digest {
+    width: 100%;
+    height: auto;
+    padding: {
+      top: 30px;
+      bottom: 30px;
+      left: 15px;
+    }
+
+    list-style: disc;
+
+    .digest-list {
+      font-size: 14px;
+      color: #333333;
+      p {
+        line-height: 30px;
+
+        .digest-email {
+          color: #2577e4;
+        }
+      }
+    }
+  }
+
+  &-list {
+    width: 100%;
+    height: auto;
+    .list-item {
+      width: 100%;
+      height: auto;
+      .item-job {
+        $param: (flex flex) (alignItems center);
+        @include flexSet($param);
+        width: 100%;
+        height: 35px;
+        padding: {
+          left: 15px;
+          right: 15px;
+        }
+        border: {
+          top: 1px solid #f2f2f2;
+          right: 1px solid #f2f2f2;
+          left: 1px solid #f2f2f2;
+        }
+        background-color: #f5f6f7;
+        color: #333333;
+        font-size: 14px;
+      }
+      .item-detail {
+        width: 100%;
+        height: auto;
+        .detail-introduction {
+          width: 100%;
+          height: 62px;
+          $param: (flex flex) (alignItems center);
+          @include flexSet($param);
+          padding: {
+            left: 30px;
+          }
+          border: {
+            top: 1px solid #f2f2f2;
+            right: 1px solid #f2f2f2;
+            left: 1px solid #f2f2f2;
+          }
+        }
+        .detail-content {
+          width: 100%;
+          height: auto;
+          padding: {
+            top: 15px;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+          }
+          border: {
+            top: 1px solid #f2f2f2;
+            right: 1px solid #f2f2f2;
+            left: 1px solid #f2f2f2;
+          }
+
+
+          .detail-content-group {
+            width: 100%;
+            height: auto;
+            padding: {
+              top: 10px;
+            }
+
+            .group-title {
+              font-size: 16px;
+              line-height: 40px;
+            }
+
+            .group-message {
+              font-size: 14px;
+              line-height: 35px;
+            }
+          }
+        }
+      }
+    }
+    .list-item:last-of-type {
+      border: 1px solid #f2f2f2;
+    }
+  }
+}

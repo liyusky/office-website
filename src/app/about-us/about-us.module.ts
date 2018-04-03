@@ -2,19 +2,24 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { AboutUsComponent } from './about-us.component';
-import { DetailHeaderComponent } from './detail-header/detail-header.component';
 import { NavComponent } from './nav/nav.component';
+import { HeaderComponent } from './header/header.component';
+
+import { AboutUsService } from './service/about-us.service';
 
 import { aboutUsRoutes } from './about-us.routes';
 
 @NgModule({
   declarations: [
     AboutUsComponent,
-    DetailHeaderComponent,
     NavComponent,
+    HeaderComponent,
   ],
   imports: [
     RouterModule.forChild(aboutUsRoutes)
-  ]
+  ],
+  providers: [
+    AboutUsService
+  ],
 })
 export class AboutUsModule { }

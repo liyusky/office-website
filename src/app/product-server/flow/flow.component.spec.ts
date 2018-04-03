@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DetailHeaderComponent } from './detail-header.component';
+import { FlowComponent } from './flow.component';
 
-describe('DetailHeaderComponent', () => {
-  let component: DetailHeaderComponent;
-  let fixture: ComponentFixture<DetailHeaderComponent>;
+describe('FlowComponent', () => {
+  let component: FlowComponent;
+  let fixture: ComponentFixture<FlowComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DetailHeaderComponent ]
+      declarations: [ FlowComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DetailHeaderComponent);
+    fixture = TestBed.createComponent(FlowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
