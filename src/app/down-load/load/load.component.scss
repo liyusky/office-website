@@ -1,59 +1,83 @@
 @import "../../../../sass/_flex.scss";
 .load {
-  width: 100%;
-  height: 600px;
   $param: (flex flex) (justifyContent center);
   @include flexSet($param);
-  background-color: #000;
-
+  width: 100%;
+  height: 600px;
+  position: relative;
   &-content {
+    $param: (flex flex) (alignItems center) (justifyContent space-between);
+    @include flexSet($param);
     width: 1100px;
     height: 100%;
     position: relative;
-    $param: (flex flex) (justifyContent space-between);
-    @include flexSet($param);
-
-    .content-select-app {
-      $param: (flex flex) (alignItems center) (justifyContent space-between);
+    .content-detail {
+      $param: (flex flex) (direction column) (justifyContent space-between);
       @include flexSet($param);
-      width: 450px;
-      height: 170px;
-      position: absolute;
-      bottom: 90px;
-
-      .content-btn-group {
-        width: 235px;
-        height: 100%;
+      width: 512px;
+      height: 350px;
+      .detail-header {
         $param: (flex flex) (direction column) (justifyContent space-between);
         @include flexSet($param);
-        padding: {
-          top: 15px;
-          bottom: 15px;
-        }
-        .btn-item {
+        width: 508px;
+        height: 120px;
+        .header-slogan {
           width: 100%;
-          height: 55px;
-          $param: (flex flex) (alignItems center) (justifyContent center);
-          @include flexSet($param);
-          background-color: transparent;
-          font-size: 21px;
+          height: 56px;
+        }
+        .header-message {
+          font-size: 20px;
           color: #ffffff;
-          border: 1px solid #ffffff;
-          border-radius: 3px;
         }
       }
-      .QR-code {
-        width: 150px;
-        height: 150px;
+      .detail-select-app {
+        $param: (flex flex) (alignItems center) (justifyContent space-between);
+        @include flexSet($param);
+        width: 450px;
+        height: 170px;
+        .btn-group {
+          width: 235px;
+          height: 100%;
+          $param: (flex flex) (direction column) (justifyContent space-between);
+          @include flexSet($param);
+          padding: {
+            top: 15px;
+            bottom: 15px;
+          }
+          .btn-item {
+            width: 100%;
+            height: 55px;
+            $param: (flex flex) (alignItems center) (justifyContent center);
+            @include flexSet($param);
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            border-radius: 3px;
+            
+            i {
+              padding: {
+                right: 8px;
+              }
+              font-size: 24px;
+            }
+            span {
+              font-size: 21px;
+            }
+          }
+        }
+        .QR-code {
+          width: 150px;
+          height: 150px;
+        }
       }
     }
-    .content-banner {
+    .content-borad {
       position: absolute;
       z-index: 99;
       width: 583px;
       height: 648px;
       bottom: -100px;
-      right: 20px;
+      right: 0;
     }
   }
 }

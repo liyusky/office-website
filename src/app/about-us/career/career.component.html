@@ -15,119 +15,35 @@
     </li>
   </ul>
   <ul class="article-list">
-    <li class="list-item">
-      <h3 class="item-job">PHP高级开发工程师 （合肥）</h3>
-      <div class="item-detail hide">
-        <div class="detail-introduction">职位类别： 互联网类 工作城市： 合肥市 发布时间： 2018-03-16</div>
-        <div class="detail-content">
-          <div class="detail-content-group">
-            <h4 class="group-title">工作职责</h4>
-            <p class="group-message">1、负责借条大师APP及网站后台服务的设计和研发；</p>
-            <p class="group-message">2、负责相关后台系统的监控和分析；</p>
-            <p class="group-message">3、持续优化系统架构，保障系统稳定可靠运行。</p>
+    <li class="list-item" *ngFor="let job of jobs">
+      <h3 class="item-job" (click)="toggleShowDetail(job.flag)" [class.active]="job.show">
+        <p>
+          <span>{{job.name}}</span>
+          <span class="job-city" *ngIf="job.city">({{job.city}})</span>
+        </p>
+        <i class="job-arrow iconfont icon-arrow-down" [class.icon-arrow-down]="!job.show" [class.icon-arrow-up]="job.show"></i>
+      </h3>
+      <div class="item-detail" *ngIf="job.show">
+        <ul class="detail-introduction">
+          <li class="introduction-item">
+            <span>职位类别：</span>
+            <span>{{job.type}}</span>
+          </li>
+          <li class="introduction-item">
+            <span>工作城市：</span>
+            <span>{{job.city}}</span>
+          </li>
+          <li class="introduction-item">
+            <span>发布时间：</span>
+            <span>{{job.date | date: 'yyyy-MM-dd'}}</span>
+          </li>
+        </ul>
+        <ul class="detail-content">
+          <div class="detail-content-group" *ngFor="let content of job.contents">
+            <h4 class="group-title">{{content.title}}</h4>
+            <p class="group-message" *ngFor="let message of content.messages">{{message}}</p>
           </div>
-          <div class="detail-content-group">
-            <h4 class="group-title">任职要求</h4>
-            <p class="group-message">1、计算机或相关专业本科或以上学历；</p>
-            <p class="group-message">2、两年以上PHP开发经验，熟练使用至少一种MVC的PHP框架，能够独立编写中等规模Web应用程序；</p>
-            <p class="group-message">3、对HTTP协议和W3C规范有较好的理解，掌握Web Service的开发与应用，对 XHTML、CSS、JavaScript等页面技术有一定了解；</p>
-            <p class="group-message">4、熟练掌握MySQL数据库应用开发，熟悉MySQL的数据库配置管理、性能优化等操作技能；</p>
-            <p class="group-message">5、对互联网产品的性能、高可用、安全性等相关知识有实践经验；</p>
-            <p class="group-message">6、责任心强，良好的沟通和团队协作能力，主动好学有进取心。</p>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <h3 class="item-job">风控主管</h3>
-      <div class="item-detail hide">
-        <div class="detail-introduction">职位类别： 互联网类 工作城市： 合肥市 发布时间： 2018-03-16</div>
-        <div class="detail-content">
-          <div class="detail-content-group">
-            <h4 class="group-title">工作职责</h4>
-            <p class="group-message">1、负责借条大师APP及网站后台服务的设计和研发；</p>
-            <p class="group-message">2、负责相关后台系统的监控和分析；</p>
-            <p class="group-message">3、持续优化系统架构，保障系统稳定可靠运行。</p>
-          </div>
-          <div class="detail-content-group">
-            <h4 class="group-title">任职要求</h4>
-            <p class="group-message">1、计算机或相关专业本科或以上学历；</p>
-            <p class="group-message">2、两年以上PHP开发经验，熟练使用至少一种MVC的PHP框架，能够独立编写中等规模Web应用程序；</p>
-            <p class="group-message">3、对HTTP协议和W3C规范有较好的理解，掌握Web Service的开发与应用，对 XHTML、CSS、JavaScript等页面技术有一定了解；</p>
-            <p class="group-message">4、熟练掌握MySQL数据库应用开发，熟悉MySQL的数据库配置管理、性能优化等操作技能；</p>
-            <p class="group-message">5、对互联网产品的性能、高可用、安全性等相关知识有实践经验；</p>
-            <p class="group-message">6、责任心强，良好的沟通和团队协作能力，主动好学有进取心。</p>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <h3 class="item-job">运营专员</h3>
-      <div class="item-detail hide">
-        <div class="detail-introduction">职位类别： 互联网类 工作城市： 合肥市 发布时间： 2018-03-16</div>
-        <div class="detail-content">
-          <div class="detail-content-group">
-            <h4 class="group-title">工作职责</h4>
-            <p class="group-message">1、负责借条大师APP及网站后台服务的设计和研发；</p>
-            <p class="group-message">2、负责相关后台系统的监控和分析；</p>
-            <p class="group-message">3、持续优化系统架构，保障系统稳定可靠运行。</p>
-          </div>
-          <div class="detail-content-group">
-            <h4 class="group-title">任职要求</h4>
-            <p class="group-message">1、计算机或相关专业本科或以上学历；</p>
-            <p class="group-message">2、两年以上PHP开发经验，熟练使用至少一种MVC的PHP框架，能够独立编写中等规模Web应用程序；</p>
-            <p class="group-message">3、对HTTP协议和W3C规范有较好的理解，掌握Web Service的开发与应用，对 XHTML、CSS、JavaScript等页面技术有一定了解；</p>
-            <p class="group-message">4、熟练掌握MySQL数据库应用开发，熟悉MySQL的数据库配置管理、性能优化等操作技能；</p>
-            <p class="group-message">5、对互联网产品的性能、高可用、安全性等相关知识有实践经验；</p>
-            <p class="group-message">6、责任心强，良好的沟通和团队协作能力，主动好学有进取心。</p>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <h3 class="item-job">市场业务专员</h3>
-      <div class="item-detail hide">
-        <div class="detail-introduction">职位类别： 互联网类 工作城市： 合肥市 发布时间： 2018-03-16</div>
-        <div class="detail-content">
-          <div class="detail-content-group">
-            <h4 class="group-title">工作职责</h4>
-            <p class="group-message">1、负责借条大师APP及网站后台服务的设计和研发；</p>
-            <p class="group-message">2、负责相关后台系统的监控和分析；</p>
-            <p class="group-message">3、持续优化系统架构，保障系统稳定可靠运行。</p>
-          </div>
-          <div class="detail-content-group">
-            <h4 class="group-title">任职要求</h4>
-            <p class="group-message">1、计算机或相关专业本科或以上学历；</p>
-            <p class="group-message">2、两年以上PHP开发经验，熟练使用至少一种MVC的PHP框架，能够独立编写中等规模Web应用程序；</p>
-            <p class="group-message">3、对HTTP协议和W3C规范有较好的理解，掌握Web Service的开发与应用，对 XHTML、CSS、JavaScript等页面技术有一定了解；</p>
-            <p class="group-message">4、熟练掌握MySQL数据库应用开发，熟悉MySQL的数据库配置管理、性能优化等操作技能；</p>
-            <p class="group-message">5、对互联网产品的性能、高可用、安全性等相关知识有实践经验；</p>
-            <p class="group-message">6、责任心强，良好的沟通和团队协作能力，主动好学有进取心。</p>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <h3 class="item-job">客服代表 （安庆）</h3>
-      <div class="item-detail hide">
-        <div class="detail-introduction">职位类别： 互联网类 工作城市： 合肥市 发布时间： 2018-03-16</div>
-        <div class="detail-content">
-          <div class="detail-content-group">
-            <h4 class="group-title">工作职责</h4>
-            <p class="group-message">1、负责借条大师APP及网站后台服务的设计和研发；</p>
-            <p class="group-message">2、负责相关后台系统的监控和分析；</p>
-            <p class="group-message">3、持续优化系统架构，保障系统稳定可靠运行。</p>
-          </div>
-          <div class="detail-content-group">
-            <h4 class="group-title">任职要求</h4>
-            <p class="group-message">1、计算机或相关专业本科或以上学历；</p>
-            <p class="group-message">2、两年以上PHP开发经验，熟练使用至少一种MVC的PHP框架，能够独立编写中等规模Web应用程序；</p>
-            <p class="group-message">3、对HTTP协议和W3C规范有较好的理解，掌握Web Service的开发与应用，对 XHTML、CSS、JavaScript等页面技术有一定了解；</p>
-            <p class="group-message">4、熟练掌握MySQL数据库应用开发，熟悉MySQL的数据库配置管理、性能优化等操作技能；</p>
-            <p class="group-message">5、对互联网产品的性能、高可用、安全性等相关知识有实践经验；</p>
-            <p class="group-message">6、责任心强，良好的沟通和团队协作能力，主动好学有进取心。</p>
-          </div>
-        </div>
+        </ul>
       </div>
     </li>
   </ul>

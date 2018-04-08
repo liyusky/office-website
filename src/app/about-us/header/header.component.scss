@@ -11,11 +11,12 @@
     left: 30px;
     right: 30px;
   }
-  background: {
-    color: #3975d5;
-  }
+  background-color: transparent;
+  position: relative;
+  z-index: 99;
   h4 {
     font-size: 36px;
+    font-weight: 400;
   }
   p {
     font-size: 16px;

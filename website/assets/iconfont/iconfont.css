@@ -1,0 +1,32 @@
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1523156882226'); /* IE9*/
+  src: url('iconfont.eot?t=1523156882226#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,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') format('woff'),
+  url('iconfont.ttf?t=1523156882226') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1523156882226#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-android:before { content: "\e6bb"; }
+
+.icon-true:before { content: "\e632"; }
+
+.icon-arrow-down:before { content: "\e695"; }
+
+.icon-waiter:before { content: "\e65a"; }
+
+.icon-arrow-left:before { content: "\e606"; }
+
+.icon-ios:before { content: "\e60c"; }
+
+.icon-arrow-right:before { content: "\e6bc"; }
+
+.icon-arrow-up:before { content: "\e6bd"; }
+

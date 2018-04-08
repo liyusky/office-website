@@ -1,88 +1,37 @@
 <!-- 网站公告 -->
 <article class="article">
   <ul class="article-list">
-    <li class="list-item">
-      <img class="item-illustration" src="">
+    <li class="list-item" *ngFor="let notice of notices">
+      <img class="item-illustration" src="{{notice.image}}">
       <div class="item-detail">
         <div class="detail-header">
-          <h4 class="detail-title">“用小孩信息来催收，欠债者都会还钱”</h4>
-          <span class="detail-date">2017-02-25</span>
+          <h4 class="detail-title">“{{notice.title}}”</h4>
+          <span class="detail-date">{{notice.date | date: "yyyy-MM-dd"}}</span>
         </div>
         <div class="detail-content">
-          <p>上述案例是北京景运律师事务所主任李鸿雁所遇到案例中的一个。“孩子基本上都是大人的软 肋，也是催收最有效的手段之一，一般情况下，只要催收机构报出小孩的信息，欠债者都会赶 紧还钱。”李鸿雁说。</p>
+          <p>{{notice.description}}</p>
         </div>
         <div class="detail-more">
-          <a href="">查看详情>></a>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <img class="item-illustration" src="">
-      <div class="item-detail">
-        <div class="detail-header">
-          <h4 class="detail-title">“用小孩信息来催收，欠债者都会还钱”</h4>
-          <span class="detail-date">2017-02-25</span>
-        </div>
-        <div class="detail-content">
-          <p>上述案例是北京景运律师事务所主任李鸿雁所遇到案例中的一个。“孩子基本上都是大人的软 肋，也是催收最有效的手段之一，一般情况下，只要催收机构报出小孩的信息，欠债者都会赶 紧还钱。”李鸿雁说。</p>
-        </div>
-        <div class="detail-more">
-          <a href="">查看详情>></a>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <img class="item-illustration" src="">
-      <div class="item-detail">
-        <div class="detail-header">
-          <h4 class="detail-title">“用小孩信息来催收，欠债者都会还钱”</h4>
-          <span class="detail-date">2017-02-25</span>
-        </div>
-        <div class="detail-content">
-          <p>上述案例是北京景运律师事务所主任李鸿雁所遇到案例中的一个。“孩子基本上都是大人的软 肋，也是催收最有效的手段之一，一般情况下，只要催收机构报出小孩的信息，欠债者都会赶 紧还钱。”李鸿雁说。</p>
-        </div>
-        <div class="detail-more">
-          <a href="">查看详情>></a>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <img class="item-illustration" src="">
-      <div class="item-detail">
-        <div class="detail-header">
-          <h4 class="detail-title">“用小孩信息来催收，欠债者都会还钱”</h4>
-          <span class="detail-date">2017-02-25</span>
-        </div>
-        <div class="detail-content">
-          <p>上述案例是北京景运律师事务所主任李鸿雁所遇到案例中的一个。“孩子基本上都是大人的软 肋，也是催收最有效的手段之一，一般情况下，只要催收机构报出小孩的信息，欠债者都会赶 紧还钱。”李鸿雁说。</p>
-        </div>
-        <div class="detail-more">
-          <a href="">查看详情>></a>
+          <a href="{{notice.link}}">查看详情>></a>
         </div>
       </div>
     </li>
   </ul>
   <div class="article-pagination">
     <ul class="pagination-btn-group">
-      <li class="btn-item">
+      <li class="btn-item" *ngIf="page.start" (click)="selectPage(page.start)">
         <span>首页</span>
       </li>
-      <li class="btn-item">
+      <li class="btn-item" *ngIf="page.previous" (click)="selectPage(page.previous)">
         <span>上一页</span>
       </li>
-      <li class="btn-item">
-        <span>1</span>
+      <li class="btn-item" *ngIf="page.current">
+        <span>{{page.current}}</span>
       </li>
-      <li class="btn-item">
-        <span>2</span>
-      </li>
-      <li class="btn-item">
-        <span>3</span>
-      </li>
-      <li class="btn-item">
+      <li class="btn-item" *ngIf="page.next" (click)="selectPage(page.next)">
         <span>下一页</span>
       </li>
-      <li class="btn-item">
+      <li class="btn-item" *ngIf="page.end" (click)="selectPage(page.end)">
         <span>尾页</span>
       </li>
     </ul>

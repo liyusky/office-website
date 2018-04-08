@@ -11,8 +11,12 @@
     width: 1210px;
     height: 100%;
     .content-arrow {
+      $param: (flex flex) (alignItems center) (justifyContent center);
+      @include flexSet($param);
       width: 55px;
       height: 110px;
+      font-size: 110px;
+      color: #e4e4e4;
     }
     .content-detail {
       $param: (flex flex) (direction column) (alignItems center) (justifyContent space-between);
@@ -58,3 +62,7 @@
     }
   }
 }
+
+.active {
+  color: #2577e4 !important;
+} 

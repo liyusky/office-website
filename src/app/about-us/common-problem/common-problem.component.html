@@ -1,159 +1,18 @@
 <!-- 常见问题 -->
 <article class="article">
   <ul class="article-list">
-    <li class="list-item">
-      <div class="item-question">
+    <li class="list-item" *ngFor="let consultation of consultations">
+      <div class="item-question" (click)="toggleShowAnswers(consultation.flag)">
         <span class="question-sign">·</span>
-        <span>什么是银行存管?银行存管如何确保用户的资金安全?</span>
+        <span>{{consultation.question}}</span>
       </div>
-      <div class="item-answer">
-        <div class="answer-group">
-          <p class="group-content">银行存管是快快贷为响应国家监管要求，保证用户资金安全，进行的用户资金银行存管升级安全升级。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
+      <div class="item-answer" *ngIf="consultation.show">
+        <div class="answer-group" *ngFor="let answer of consultation.answers">
+          <p class="group-title" *ngIf="answer.title">
             <span class="title-sign">|</span>
-            <b>系统分账监管</b>
+            <b>{{answer.title}}</b>
           </p>
-          <p class="group-content">接入存管系统后，平台对用户交易资金和平台自由资金实行分账监管，二者完全独立且互相隔离；平台无法解除用户账户资金。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
-            <span class="title-sign">|</span>
-            <b>银行账户存管</b>
-          </p>
-          <p class="group-content">绑卡、充值、提现等每一笔与用户资金有关的操作，均需通过江西银行资金存管账户实现，避免资金被平台挪用的风险。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
-            <span class="title-sign">|</span>
-            <b>用户授权操作</b>
-          </p>
-          <p class="group-content">用户需开通江西银行存管电子账户，并单独设立交易密码，充值、投资等操作时，银行在得到用户授权后，根据交易指令进行资金划转。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
-            <span class="title-sign">|</span>
-            <b>银行监管交易流程</b>
-          </p>
-          <p class="group-content">江西银行对交易进行管理，并对所有资金流水存档记录，确保接待双方的资金流转和债权关系清晰明确。</p>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <div class="item-question">
-        <span class="question-sign">·</span>
-        <span>什么是银行存管?银行存管如何确保用户的资金安全?</span>
-      </div>
-      <div class="item-answer">
-        <div class="answer-group">
-          <p class="group-content">银行存管是快快贷为响应国家监管要求，保证用户资金安全，进行的用户资金银行存管升级安全升级。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
-            <span class="title-sign">|</span>
-            <b>系统分账监管</b>
-          </p>
-          <p class="group-content">接入存管系统后，平台对用户交易资金和平台自由资金实行分账监管，二者完全独立且互相隔离；平台无法解除用户账户资金。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
-            <span class="title-sign">|</span>
-            <b>银行账户存管</b>
-          </p>
-          <p class="group-content">绑卡、充值、提现等每一笔与用户资金有关的操作，均需通过江西银行资金存管账户实现，避免资金被平台挪用的风险。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
-            <span class="title-sign">|</span>
-            <b>用户授权操作</b>
-          </p>
-          <p class="group-content">用户需开通江西银行存管电子账户，并单独设立交易密码，充值、投资等操作时，银行在得到用户授权后，根据交易指令进行资金划转。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
-            <span class="title-sign">|</span>
-            <b>银行监管交易流程</b>
-          </p>
-          <p class="group-content">江西银行对交易进行管理，并对所有资金流水存档记录，确保接待双方的资金流转和债权关系清晰明确。</p>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <div class="item-question">
-        <span class="question-sign">·</span>
-        <span>什么是银行存管?银行存管如何确保用户的资金安全?</span>
-      </div>
-      <div class="item-answer">
-        <div class="answer-group">
-          <p class="group-content">银行存管是快快贷为响应国家监管要求，保证用户资金安全，进行的用户资金银行存管升级安全升级。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
-            <span class="title-sign">|</span>
-            <b>系统分账监管</b>
-          </p>
-          <p class="group-content">接入存管系统后，平台对用户交易资金和平台自由资金实行分账监管，二者完全独立且互相隔离；平台无法解除用户账户资金。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
-            <span class="title-sign">|</span>
-            <b>银行账户存管</b>
-          </p>
-          <p class="group-content">绑卡、充值、提现等每一笔与用户资金有关的操作，均需通过江西银行资金存管账户实现，避免资金被平台挪用的风险。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
-            <span class="title-sign">|</span>
-            <b>用户授权操作</b>
-          </p>
-          <p class="group-content">用户需开通江西银行存管电子账户，并单独设立交易密码，充值、投资等操作时，银行在得到用户授权后，根据交易指令进行资金划转。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
-            <span class="title-sign">|</span>
-            <b>银行监管交易流程</b>
-          </p>
-          <p class="group-content">江西银行对交易进行管理，并对所有资金流水存档记录，确保接待双方的资金流转和债权关系清晰明确。</p>
-        </div>
-      </div>
-    </li>
-    <li class="list-item">
-      <div class="item-question">
-        <span class="question-sign">·</span>
-        <span>什么是银行存管?银行存管如何确保用户的资金安全?</span>
-      </div>
-      <div class="item-answer">
-        <div class="answer-group">
-          <p class="group-content">银行存管是快快贷为响应国家监管要求，保证用户资金安全，进行的用户资金银行存管升级安全升级。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
-            <span class="title-sign">|</span>
-            <b>系统分账监管</b>
-          </p>
-          <p class="group-content">接入存管系统后，平台对用户交易资金和平台自由资金实行分账监管，二者完全独立且互相隔离；平台无法解除用户账户资金。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
-            <span class="title-sign">|</span>
-            <b>银行账户存管</b>
-          </p>
-          <p class="group-content">绑卡、充值、提现等每一笔与用户资金有关的操作，均需通过江西银行资金存管账户实现，避免资金被平台挪用的风险。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
-            <span class="title-sign">|</span>
-            <b>用户授权操作</b>
-          </p>
-          <p class="group-content">用户需开通江西银行存管电子账户，并单独设立交易密码，充值、投资等操作时，银行在得到用户授权后，根据交易指令进行资金划转。</p>
-        </div>
-        <div class="answer-group">
-          <p class="group-title">
-            <span class="title-sign">|</span>
-            <b>银行监管交易流程</b>
-          </p>
-          <p class="group-content">江西银行对交易进行管理，并对所有资金流水存档记录，确保接待双方的资金流转和债权关系清晰明确。</p>
+          <p class="group-content">{{answer.content}}</p>
         </div>
       </div>
     </li>

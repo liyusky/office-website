@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 import { AboutUsComponent } from './about-us.component';
 import { NavComponent } from './nav/nav.component';
@@ -16,6 +17,7 @@ import { aboutUsRoutes } from './about-us.routes';
     HeaderComponent,
   ],
   imports: [
+    CommonModule,
     RouterModule.forChild(aboutUsRoutes)
   ],
   providers: [

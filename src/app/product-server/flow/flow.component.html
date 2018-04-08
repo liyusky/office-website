@@ -1,18 +1,21 @@
 <section class="flow">
   <div class="flow-content">
-    <aside class="content-arrow arrow-left"></aside>
+    <aside class="content-arrow arrow-left" (click)="slideShow(-1)" [class.active]="!isActive">
+      <i class="iconfont icon-arrow-left"></i>
+    </aside>
     <div class="content-detail">
       <h2 class="detail-title">借条大师借款流程</h2>
       <div class="detail-group">
-        <img class="group-board" src="">
+        <img class="group-board" [src]="flow.image">
         <div class="group-message">
-          <h3 class="message-title">注册及认证</h3>
-          <p class="message-content">下载借条大师APP</p>
-          <p class="message-content">注册并完成必填信息认证</p>
+          <h3 class="message-title">{{flow.title}}</h3>
+          <p class="message-content" *ngFor="let message of flow.messages">{{message}}</p>
         </div>
       </div>
     </div>
-    <aside class="content-arrow arrow-right"></aside>
+    <aside class="content-arrow arrow-right" (click)="slideShow(1)" [class.active]="isActive">
+      <i class="iconfont icon-arrow-right"></i>
+    </aside>
   </div>
 </section>
 

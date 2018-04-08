@@ -52,6 +52,18 @@
             @include flexSet($param);
             border: 1px solid #ffffff;
             color: #ffffff;
+            border-radius: 3px;
+
+
+            i {
+              padding: {
+                right: 3px;
+              }
+              font-size: 24px;
+            }
+            span {
+              font-size: 18px;
+            }
           }
         }
       }

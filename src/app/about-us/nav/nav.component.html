@@ -2,9 +2,12 @@
   <div class="header-title">关于我们</div>
 </div>
 <ul class="nav-list">
-  <li class="list-item" routerLink="company-profile">公司简介</li>
-  <li class="list-item" routerLink="site-notice">网站公告</li>
-  <li class="list-item" routerLink="common-problem">常见问题</li>
-  <li class="list-item" routerLink="career">招贤纳士</li>
-  <li class="list-item" routerLink="contact-us">联系我们</li>
+  <li class="list-item" *ngFor="let item of navList" (click)="selectContent(item.flag)" routerLinkActive="active" routerLink="{{item.goal}}">{{item.title}}</li>
 </ul>
+
+
+
+<!-- <li class="list-item" (click)="selectContent(1)" routerLinkActive="active" routerLink="site-notice">网站公告</li>
+<li class="list-item" (click)="selectContent(2)" routerLinkActive="active" routerLink="common-problem">常见问题</li>
+<li class="list-item" (click)="selectContent(3)" routerLinkActive="active" routerLink="career">招贤纳士</li>
+<li class="list-item" (click)="selectContent(4)" routerLinkActive="active" routerLink="contact-us">联系我们</li> -->
